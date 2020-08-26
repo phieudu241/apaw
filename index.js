@@ -9,6 +9,7 @@ function Apaw(parameters) {
     request(operation, payload) {
       validator({ operation, parameters, payload });
       const {
+        corsHost,
         host,
         region,
         key,
@@ -28,6 +29,7 @@ function Apaw(parameters) {
         shortDate,
       });
       return makeRequest({
+        corsHost,
         authorization,
         headers,
         host,
